@@ -4,7 +4,6 @@
   "dependencies": {
     "angular": "^1.4.0",
     "bootstrap-sass-official": "^3.2.0",
-    "ng-websocket": "^0.2.1",
     "normalize-scss": "normalize.scss#^7.0.0"
   },
   "devDependencies": {

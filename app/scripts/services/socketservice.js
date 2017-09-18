@@ -18,7 +18,7 @@ angular.module('stockSocketApp').service('socketService', function($rootScope) {
 
   var websocket = new WebSocket("ws://stocks.mnet.website");
 
-  function testWebSocket() {
+  function connectSocket() {
     websocket.onopen = function(evt) {
       onOpen(evt)
     };
@@ -35,7 +35,7 @@ angular.module('stockSocketApp').service('socketService', function($rootScope) {
     };
   }
 
-  testWebSocket();
+  connectSocket();
 
   function onOpen(evt) {}
   function onMessage(evt) {

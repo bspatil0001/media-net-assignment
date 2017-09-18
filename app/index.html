@@ -16,7 +16,7 @@
   <!-- endbuild -->
 </head>
 
-<body ng-app="stockSocketApp" ng-controller="MainCtrl">
+<body ng-app="stockSocketApp" ng-controller="MainCtrl" ng-cloak>
   <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -71,69 +71,6 @@
     </div>
   </div>
 
-  <!-- <script type="text/javascript">
-      var wsUri = "ws://stocks.mnet.website";
-      var output;
-
-    function init() {
-      output = document.getElementById("output");
-      testWebSocket();
-    }
-
-    function testWebSocket() {
-      websocket = new WebSocket(wsUri);
-      websocket.onopen = function(evt) {
-        onOpen(evt)
-      };
-      // websocket.onclose = function(evt) {
-      //   onClose(evt)
-      // };
-      websocket.onmessage = function(evt) {
-        onMessage(evt)
-      };
-      websocket.onerror = function(evt) {
-        onError(evt)
-      };
-    }
-
-    function onOpen(evt) {
-      writeToScreen("CONNECTED");
-      doSend("WebSocket rocks");
-    }
-
-    // function onClose(evt) {
-    //   writeToScreen("DISCONNECTED");
-    // }
-
-    function onMessage(evt) {
-      writeToScreen('<span style="color: blue;">RESPONSE: ' + evt.data + '</span>');
-      // handleUpdateMessage(evt.data)
-      // websocket.close();
-    }
-
-    function handleUpdateMessage(data) {
-      data.forEach(([name, price]) => console.log(`${name}: ${price}`));
-    }
-
-    function onError(evt) {
-      writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
-    }
-
-    function doSend(message) {
-      writeToScreen("SENT: " + message);
-      websocket.send(message);
-    }
-
-    function writeToScreen(message) {
-      var pre = document.createElement("p");
-      pre.style.wordWrap = "break-word";
-      pre.innerHTML = message;
-      output.appendChild(pre);
-    }
-
-    window.addEventListener("load", init, false);
-  </script> -->
-
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
     ! function(A, n, g, u, l, a, r) {
@@ -160,8 +97,6 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/services/socketservice.js"></script>
-  <script src="scripts/services/socketservice.js"></script>
-  <script src="scripts/directives/highlight.js"></script>
   <!-- endbuild -->
 </body>
 
